@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;500;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+}
+
+.header{
+    width: 100%;
+    min-height: 10vh;
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(https://github.com/janak27/premyadavking/blob/main/img/seedlingshands-1000.jpg?raw=true);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+nav{
+    display: flex;
+    padding: 2% 6% ;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+
+.navlinks{
+    flex: 1;
+    text-align: right;
+}
+
+.navlinks ul li{
+    list-style: none;
+    display:inline-block;
+    padding:8px 12px;
+    position: relative;
+}
+
+.navlinks ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.navlinks ul li::after{
+    content: "";
+    width: 0%;
+    height:2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navlinks ul li:hover::after{
+    width:100%;
+}
+
+.text-box {
+    width:90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px ;
+}
+
+.text-box p{
+    margin: 10px 0px 40px;
+    font-size: 14px;
+    color: white;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 12px 34px;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+    cursor:pointer;
+}
+
+.hero-btn:hover{
+    border-color: green;
+    color: green;
+    background: white;
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+
+
+@media (max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px ;
+    }
+
+    .navlinks ul li{
+        display: block;
+    }
+
+    .navlinks{
+        position: absolute;
+        background: lightgreen;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+
+    }
+    nav .fa{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor:pointer;
+    }
+
+    .navlinks ul{
+        padding: 30px;
+    }
+    .text-box p{
+        margin: 10px 10px 10px;
+        font-size: 10px;
+        color: white;
+    }
+
+
+}
+
+/* products  */
+
+.products{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.products h1{
+    font-size:40px;
+    font-weight:600;
+}
+
+.products p{
+    color:black;
+    font-size: 15px;
+    font-weight:300;
+    line-height:22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display:flex ;
+    justify-content: space-between;
+}
+
+.plant-col{
+    flex-basis: 30%;
+    background: rgb(226, 218, 218);
+    border-radius:20px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition:0.5s;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+.plant-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.5);
+}
+
+@media(max-width:700px) {
+    .row{
+        flex-direction:column;
+    }
+}
+
+/* plants ke photu */
+
+.plants{
+    width:80%;
+    margin: auto;
+    text-align:center;
+    padding-top: 50px ;
+    
+}
+
+.plants-col{
+    flex-basis: 32%;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.plants-col img {
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background:rgb(103, 231, 53,0.7);
+}
+
+
+.layer h3{
+    width: 100%;
+    font-weight:500 ;
+    color: white;
+    font-size: 25px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+/* footer mdrch */
+
+footer {
+    background-color:green;
+    box-sizing: border-box;
+    padding: 70px 0;
+    line-height: 1.5;
+
+}
+
+.container {
+    max-width: 90%;
+    background-color: green;
+    margin:  auto;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer-col{
+    width: 20%;
+    padding: 0px 15px;
+
+}
+
+.raw{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col h4{
+    font-size: 20px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 2em;
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.footer-col h4::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color:white;
+    height: 3px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom:10px;
+}
+
+.footer-col ul li a{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.footer-col ul li a:hover{
+    color: white;
+    padding-left:10px;
+
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color:rgb(255, 255, 255,0.2);
+    margin: 0px 10px 10px 0px;
+    text-align: center;
+    line-height: 40px;
+    border-radius:50px;
+    color: white;
+    transition: all 0.5s ease;
+
+}
+
+.footer-col .social-links a:hover{
+    color:#24262b;
+    background-color:white;
+
+}
+
+
+@media (max-width: 700px) {
+    .footer-col{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    .navlinks{
+       display: none;
+    }
+    
+}
+</style>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* :root{
+    --text-color = purple;
+} */
+
+p{
+    color: grey;
+
+}
+
+a{
+    text-decoration: none;
+    color: purple;
+}
+a:hover{
+    text-decoration: none;
+    color: red;
+}
+
+h2{
+    color: grey;
+    font-size: 1.5rem;
+
+}
+
+.main_cart {
+    background-color: lightgreen;
+}
+
+.card {
+    border: none;
+}
+
+.product_img .img-fluid{
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 60%;
+    height: auto;
+}
+
+.price_money h3{
+    font-size: 1rem;
+}
+
+.product_name{
+    color: black;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 1000;
+}
+
+.set_quantity{
+    position: relative;
+}
+.set_quantity::after{
+    
+    width: auto;
+    height: auto;
+    text-align: center;
+    position:absolute;
+    bottom: -30px;
+    right: 0.5rem;
+}
+
+.page-link{
+    line-height: 100px;
+    width: 55px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    color: blue;
+}
+
+.page-item input{
+    line-height: 23px;
+    padding: 3px;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.price_indiv p {
+    font-size: 1.5rem;
+}
+
+.fa-heart:hover{
+    color: Red;
+    cursor: pointer;
+}
+
+</style>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html">
+                <img src="https://github.com/janak27/premyadavking/blob/main/img/cold,%20smooth%20&%20tasty..png?raw=true" ,alt=""></a>
+            <div class="navlinks" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="/product.html" target="_blank">Product</a></li>
+                    <li><a href="/details.html" target="_blank">Your cart</a></li>
+                    <li><a href="">Contact us</a></li>
+                    <li><a href="">About us</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+     
+
+    </section>
+    <div class="fluid">
+        <div class="row">
+            <div class="col-md-10 col-11 mx-auto">
+                <div class="row mt-5 gx-3">
+                    <!-- left side div  -->
+                    <div class="col-md-12 col-lg-8 col-11 mx-auto main_cart  mb-lg-0 mb-5 cona">
+                      
+                        
+                    </div>
+                    <!-- right side div -->
+                    <div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
+                        <div class=" right_side p-3 shadow bg-white">
+                            <h2 class="product_name mb-5">  Total amount of</h2>
+                            <div class="price_indiv d-flex justify-content-between">
+                                <p>Product amount</p>
+                                <p>₹<span class="product_total">0.00</span></p>
+                            </div>
+                            <div class="price_indiv d-flex justify-content-between">
+                                <p>Shipping charge</p>
+                                <p>₹<span>100.00</span></p>
+                            </div>
+                            <hr>
+                            <div class="total-amt d-flex justify-content-between font-weight-bold">
+                                <p>Total amount (including GST)</p>
+                                <p>₹<span id="total_cart_amt">0.00</span></p>
+                            </div>
+                            <button class="btn btn-primary text-uppercase" style="text-decoration: none;
+                            "><a href="/checkout">Checkout</a></button>
+                        </div>
+                        <!-- discount code        -->
+                        <!-- <div class="discount_code mt-3 shadow">
+                            <div class="card">
+                                <div class="card-body">
+                                    <a class="d-flex justify-content-between" data-toggle="collapse"
+                                        href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        Add a discount code(optional)
+                                        <span>
+                                            <i class="fas fa-chevron-down pt-1"></i>
+                                        </span>
+                                    </a>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="mt-3">
+                                            <input type="text" name="" id="discount-code1" class="form-control font-weight-bold" placeholder="Enter the discount code">
+                                        <small id="error_trw" class="text-dark mt-3">code is green</small>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm mt-3" onclick="discount_code()">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- discount_code ends                      -->
+                        <!-- <div class="mt-3 shadow p-3 bg-white"> -->
+                            <!-- <div class="pt-4">
+                                <h5 class="mb-4"> Expected Delivery Code</h5>
+                                <p>JULY 27th 2020- JULY 29th 2020</p>
+                                </h5>
+                            </div> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <!-- categories -->
+    <footer>
+        <div class="container">
+            <div class="raw">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Internships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">Payment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">medicinal plants</a></li>
+                        <li><a href="#">Flowers seedlings</a></li>
+                        <li><a href="#">small herbs</a></li>
+                        <li><a href="#">Best Seeds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-amazon"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- javascript toggle -->
+    <!-- {{a}} -->
+    <script>
+        window.data="{{a}}"
+        data=data.replaceAll("&quot;",'"') 
+        data=JSON.parse(data)
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.display="block";
+            setTimeout(ev=>{navLinks.style.right = "0px";   })
+            
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+            setTimeout(ev=>{navLinks.style.display="none"   },500)
+            
+        }
+    </script>
+</body>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+
+    <script>
+         const Remove = (e) => {
+            window.cona=document.querySelector(".cona")
+        
+
+            if(cart[e] != undefined){
+            quantity = 0
+            cart[e][0] = quantity;
+            cart[e][2] = parseFloat(document.querySelector(`.quantity${e}`).innerHTML*quantity);
+            localStorage.setItem('cart',JSON.stringify(cart))
+            cartdetail()
+                }
+
+            }
+                    const decreaseNumber = (e) => {
+            window.cona=document.querySelector(".cona")
+        
+            console.log(e)
+            var itemval = document.querySelector(`.textbox${e}`);
+            
+
+            if (itemval.value <= 0) {
+                itemval.value = 0;
+            } else {
+                itemval.value = parseInt(itemval.value) - 1;
+            }
+        
+            
+            if(cart[e] != undefined){
+            quantity = itemval.value
+            cart[e][0] = quantity;
+            cart[e][2] = parseFloat(document.querySelector(`.quantity${e}`).innerHTML*quantity);
+            localStorage.setItem('cart',JSON.stringify(cart))
+            cartdetail()
+        }
+
+        }
+
+        const increaseNumber = (e) => {
+            window.cona=document.querySelector(".cona")
+        
+      
+        
+
+            var itemval = document.querySelector(`.textbox${e}`);
+
+            if (itemval.value >= 10) {
+                itemval.value = 10;
+                alert('maximum 10 products allowed')
+                itemval.style.background = 'red';
+                itemval.style.color = "#fff";
+        
+            } else {
+                itemval.value = parseInt(itemval.value) + 1;
+
+            }
+             
+
+            if(cart[e] != undefined){
+            quantity = itemval.value
+            cart[e][0] = quantity;
+            cart[e][2] = parseFloat(document.querySelector(`.quantity${e}`).innerHTML*quantity);
+            localStorage.setItem('cart',JSON.stringify(cart))
+            cartdetail()
+        }
+
+        
+        }
+    </script>
+    <script type="text/javascript">
+    if(localStorage.getItem('cart') == null){
+          var cart = {}
+        }
+        else{
+          var cart = JSON.parse(localStorage.getItem('cart'))
+          
+        }
+       function cartdetail()
+       {
+        window.cona=document.querySelector(".cona")
+        cona.innerHTML=""
+        if(localStorage.getItem('cart') == null){
+          var cart = {}
+        }
+        else{
+          var cart = JSON.parse(localStorage.getItem('cart'))
+          
+        }
+      
+        total = 0;
+        for (item in cart){
+            
+
+            let Da=data.find(ev=>ev.pk == item)
+            console.log(Da)   
+          let name = cart[item][1];
+          let quantity = cart[item][0];
+          let price = cart[item][2];
+          total = total + cart[item][2];
+          if (quantity !=0){
+
+            cona.innerHTML+=`    
+               <div class="card p-4">
+                            <h2 class="py-4 font-weight-bold"> Cart</h2>
+                            <div class="row">
+                                <!-- cart images div  -->
+                                <div
+                                    class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+                                    <img src=${Da.fields.image} class="img-fluid"
+                                        alt="cart img">
+                                </div>
+                                <!-- cart product details     -->
+
+                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                    <div class="row">
+                                        <!-- product-name  -->
+                                        <div class=" col-6 card-title">
+                                            <h1 class="mb-4 product_name"> ${Da.fields.title}
+                                            </h1>
+                                            <p class="mb-2">Use : ${Da.fields.description}</p>
+                                            <p class="mb-3">shifted from : pune</p>
+                                        </div>
+                                        <!-- quantity   -->
+                                        <div class="col-6">
+                                            <ul class="pagination justify-content-end set_quantity" style="margin-left: 150px;">
+                                                <li class="page-item">
+                                                    <button class="page-link" onclick="decreaseNumber(${Da.pk})"><i
+                                                            class="fa fa-minus"></i></button>
+                                                </li>
+                                                <li class="page-item"> <input type="text" name="" class="page-link textbox${Da.pk}"
+                                                        value="${quantity}" id="textbox" ></l>
+                                                <li class="page-item">
+                                                    <button class="page-link" onclick="increaseNumber(${Da.pk})"><i
+                                                            class="fa fa-plus"></i></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- remove and price -->
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-between remove_wish">
+                                            <p> <i class="fa fa-trash remove${Da.pk}" onclick="Remove(${Da.pk})"> REMOVE </i> </p>
+                                       
+                                        </div>
+                                        <h1 class=quantity${Da.pk} style="
+    display: none;
+">${Da.fields.price}</h1>
+                                            <div class="col-4 d-flex justify-content-end price_money">   
+                                               <h3>Product price- ₹ <span id="itemval">${Da.fields.price}</span></h3>
+                                           </div>
+                                        <div class="col-4 d-flex justify-content-end price_money">
+                                               
+                                            <h3>Total- ₹ <span id="itemval">${price}</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>`
+        
+
+          }
+
+
+          // new feature using the symbol to allow the html `` it's below the Esc button
+        //   var itemString = `<li class="list-group-item d-flex justify-content-between align-items-center"><span class="badge badge-primary badge-pill">${quantity}</span>${name}<span class="badge badge-warning badge-pill">${price}</span></li>`;
+         
+        //   $('#item_list').append(itemString);
+        
+                    }
+       document.querySelector(".product_total").innerHTML=total
+       
+       document.querySelector("#total_cart_amt").innerHTML=(total+100*1)+((total+100)*(18/100))
+       }
+       cartdetail()
+        // totalPrice = `<li class="list-group-item d-flex justify-content-between align-items-center"><b>Your Total Amount</b><span class="badge badge-success">${total}</span></li>`;
+        
+        // $('#item_list').append(totalPrice);
+        // $('#total').val(total)
+        // $('#items').val(JSON.stringify(cart)); 
+      </script>
+
+</html>

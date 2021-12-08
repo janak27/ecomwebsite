@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;500;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+</head>
+<style>
+    
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+} */
+/* body{
+    font-family: 'Playfair Display', serif;
+    display: grid;
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+    align-content: center;
+    min-height: 100vh;
+} */
+/* section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 70vh;
+    width: 75vw;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 12px
+} */
+/* .image{
+    background-color: #12192c;
+    display: flex;
+    border-radius: 12px 0 0 12px;
+} */
+/* .image img{
+height:50vh;
+margin:50px auto
+} */
+.content{
+    /* background-color: #12192c; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0  12px 12px 0;
+    color: #fff;
+}
+.content h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 6px;
+    opacity: 0.9;
+}
+.content span{
+    height: 0.5px;
+    width: 80px;
+    background: #777;
+    margin: 30px 0;
+}
+.content p{
+    padding-bottom: 15px;
+    font-weight: 300;
+    opacity: 0.7;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.7;
+    color:#ffffff
+}
+.links{
+    margin: 15px 0;
+}
+.links li{
+    border: 2px solid #4158D0;
+    list-style: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 160px;
+    text-align: center;
+}
+.links li a{
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+.links li:hover{
+    border-color: #C850C0;
+}
+
+.vertical-line{
+    height: 30px;
+    width: 3px;
+    background: #C850C0;
+    margin: 0 auto;
+}
+.icons{
+    display: flex;
+    padding: 15px 0;
+}
+.icons li{
+    display: block;
+    padding: 5px;
+    margin: 5px;
+}
+.icons li i{
+    font-size: 26px;
+    opacity: 0.8;
+}
+.icons li i:hover{
+    /* color: #C850C0; */
+    cursor: pointer;
+}
+.linkedin:hover{
+    color: #0077b5;
+}
+.ama:hover{
+    color: #FF9900;
+}
+.git:hover{
+    color: #4078c0;
+}
+.insta:hover{
+    color:#8a3ab9;
+}
+
+/*****************/
+
+@media(max-width: 900px){
+    section{
+        grid-template-columns: 1fr;
+        width: 100%;
+        border-radius: none;
+    }
+    .image{
+        /* height: 0vh; */
+        border-radius: none;
+    }
+    .content{
+        height: 100vh;
+        border-radius: none;
+    }
+    .content h2{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .content span{
+        margin: 20px 0;
+    }
+    .content p{
+        font-size: 14px;
+    }
+    .links li a{
+        font-size: 14px;
+    }
+    .links{
+        margin: 5px 0;
+    }
+    .links li{
+        padding: 6px 10px;
+    }
+    .icons li i{
+        font-size: 15px;
+    }
+}
+.credit{
+    text-align: center;
+    color: #000;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .credit a{
+    text-decoration: none;
+    color:#000;
+    font-weight: bold;
+  } 
+
+
+
+</style>
+
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+}
+
+.header{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(https://github.com/janak27/premyadavking/blob/main/img/seedlingshands-1000.jpg?raw=true);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+nav{
+    display: flex;
+    padding: 2% 6% ;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+
+.navlinks{
+    flex: 1;
+    text-align: right;
+}
+
+.navlinks ul li{
+    list-style: none;
+    display:inline-block;
+    padding:8px 12px;
+    position: relative;
+}
+
+.navlinks ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.navlinks ul li::after{
+    content: "";
+    width: 0%;
+    height:2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navlinks ul li:hover::after{
+    width:100%;
+}
+
+.text-box {
+    width:90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px ;
+}
+
+.text-box p{
+    margin: 10px 0px 40px;
+    font-size: 14px;
+    color: white;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 12px 34px;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+    cursor:pointer;
+}
+
+.hero-btn:hover{
+    border-color: green;
+    color: green;
+    background: white;
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+
+
+@media (max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px ;
+    }
+
+    .navlinks ul li{
+        display: block;
+    }
+
+    .navlinks{
+        position: absolute;
+        background: lightgreen;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+
+    }
+    nav .fa{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor:pointer;
+    }
+
+    .navlinks ul{
+        padding: 30px;
+    }
+    .text-box p{
+        margin: 10px 10px 10px;
+        font-size: 10px;
+        color: white;
+    }
+
+
+}
+
+/* products  */
+
+.products{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.products h1{
+    font-size:40px;
+    font-weight:600;
+}
+
+.products p{
+    color:black;
+    font-size: 15px;
+    font-weight:300;
+    line-height:22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display:flex ;
+    justify-content: space-between;
+}
+
+.plant-col{
+    flex-basis: 30%;
+    background: rgb(226, 218, 218);
+    border-radius:20px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition:0.5s;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+.plant-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.5);
+}
+
+@media(max-width:700px) {
+    .row{
+        flex-direction:column;
+    }
+}
+
+/* plants ke photu */
+
+.plants{
+    width:80%;
+    margin: auto;
+    text-align:center;
+    padding-top: 50px ;
+    
+}
+
+.plants-col{
+    flex-basis: 32%;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.plants-col img {
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background:rgb(103, 231, 53,0.7);
+}
+
+
+.layer h3{
+    width: 100%;
+    font-weight:500 ;
+    color: white;
+    font-size: 25px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+/* footer mdrch */
+
+footer {
+    background-color:green;
+    box-sizing: border-box;
+    padding: 70px 0;
+    line-height: 1.5;
+
+}
+
+.container {
+    max-width: 90%;
+    background-color: green;
+    margin:  auto;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer-col{
+    width: 20%;
+    padding: 0px 15px;
+
+}
+
+.raw{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col h4{
+    font-size: 20px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 2em;
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.footer-col h4::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color:white;
+    height: 3px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom:10px;
+}
+
+.footer-col ul li a{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.footer-col ul li a:hover{
+    color: white;
+    padding-left:10px;
+
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color:rgb(255, 255, 255,0.2);
+    margin: 0px 10px 10px 0px;
+    text-align: center;
+    line-height: 40px;
+    border-radius:50px;
+    color: white;
+    transition: all 0.5s ease;
+
+}
+
+.footer-col .social-links a:hover{
+    color:#24262b;
+    background-color:white;
+
+}
+
+
+@media (max-width: 700px) {
+    .footer-col{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    
+}
+</style>
+<body>
+    <section class="header">
+        <nav>
+            <a href="{% url 'index' %}"><img src="https://github.com/janak27/premyadavking/blob/main/img/logo.png?raw=true" ,alt=""></a>
+            <div class="navlinks" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    {% if user.is_authenticated %}
+                    <li style="color: white;">logged in as -{{ user.get_username }}</li>
+                  
+                    <!-- <p>Welcome, . Thanks for logging in.</p> -->
+                    {% else %}
+                    <li><a href="{% url 'login_custom' %}">Login</a></li>
+                  
+                    {% endif %}
+                    
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    
+                    <li><a href="{% url 'product_list' %}" >Product</a></li>
+                    <li><a href="{% url 'cart' %}" target="_blank">Your cart</a></li>
+                    <li><a href="{% url 'logout_custom' %}">logout</a></li>
+                    <li><a href="{% url 'about' %}">About us</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+        <div>
+            <section>
+                <div class = "image">
+                   <!-- <img src="https://cdn.pixabay.com/photo/2017/08/26/23/37/business-2684758__340.png"> -->
+                </div>
+    
+                <div class = "content">
+                    <h2>About Us</h2>
+                    <span><!-- line here --></span>
+                    <p ;color: #000; ">who we are ?? so , basically we are just students of IT Engineering, where we belong to Bharati Vidyapeeth College of Engineering.
+                        When we thought about this, we really liked the idea of this Website. We slowly started working on it, our efforts were also successful in it. Our mentor also helped us a lot in this. Thank you</p>
+                    <!-- <ul class = "links">
+                        <li><a href = "#">work</a></li>
+                        <div class = "vertical-line"></div>
+                        <li><a href = "#">service</a></li>
+                        <div class = "vertical-line"></div>
+                        <li><a href = "#">contact</a></li>
+                    </ul> -->
+                    <ul class = "icons">
+                        <li class="linkedin">
+                            <i class="fab fa-linkedin" ></i>
+                            <!-- <i class = "fa fa-twitter"></i> -->
+                        </li>
+                        <li class="ama">
+                            <i class="fab fa-amazon"></i>
+                            <!-- <i class = "fa fa-facebook"></i> -->
+                        </li>
+                        <li class="git">
+                            <i class = "fa fa-github"></i>
+                        </li>
+                        <li class="insta">
+                            <i class="fab fa-instagram"></i>
+                            <!-- <i class = "fa fa-pinterest"></i> -->
+                        </li>
+                    </ul>
+                </div>
+            </section><br><br>
+            <!-- <div class="credit">Made with <span style="color:tomato">❤</span> by <a href="https://www.learningrobo.com/">Learning Robo</a></div> -->
+       
+        </div>
+
+
+    </section>
+
+
+
+    <!-- categories -->
+    <footer>
+        <div class="container">
+            <div class="raw">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Internships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">Payment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">medicinal plants</a></li>
+                        <li><a href="#">Flowers seedlings</a></li>
+                        <li><a href="#">small herbs</a></li>
+                        <li><a href="#">Best Seeds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-amazon"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- javascript toggle -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0px";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>
